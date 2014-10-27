@@ -6,8 +6,7 @@
 
   <p> <span class="profile-info name"><%= @user.name %> </span> </p>
   <hr style="color:#efefef">
-  <img class="user-profile" src="<%if @user.image != "" %><%= @user.image %><% else %>http://sweetclipart.com/multisite/sweetclipart/files/theater_masks_silhouette.png<% end %>" width=100px height=100px />
-<br />
+
   <span class="profile-info"> <%= @user.email %></span>
 
 <%= link_to 'Edit', edit_user_path(@user) %>
