@@ -1,0 +1,32 @@
+<%= render 'layouts/header' %>
+
+<section>
+
+<div>
+
+  <p> Name: <%= @kid.name %>  </p>
+  <hr style="color:#efefef">
+
+  <p> Email: <%= @kid.email %></p>
+  <p> Grade: <%= @kid.grade %></p>
+  <p> Classroom: <%= @kid.classroom %></p>
+  <p> DOB: <%= @kid.dob %></p>
+  <p> Address:<br>
+      <%= @kid.address %><br>
+      <%= @kid.apt %><br>
+      <%= @kid.city %><br>
+      <%= @kid.state %><br>
+      <%= @kid.zip %></p>
+  <p> Home Phone: <%= @kid.home_phone %></p>
+  <p> Work Phone: <%= @kid.work_phone %></p>
+  <p> Parent: <%= @kid.parent %></p>
+  <p> Allowed to Pickup: <%= @kid.pickup %></p>
+  <p> Allergies: <%= @kid.allergies %></p>
+
+
+<%= link_to 'Edit', edit_kid_path(@kid) %>
+</div>
+
+</section>
+
+

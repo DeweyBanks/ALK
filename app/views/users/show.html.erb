@@ -2,14 +2,16 @@
 
 <section>
 
-<div id="profile-box">
+<div>
 
-  <p> <span class="profile-info name"><%= @user.name %> </span> </p>
+  <p> <span><%= @user.name %> </span> </p>
   <hr style="color:#efefef">
 
-  <span class="profile-info"> <%= @user.email %></span>
+  <span> <%= @user.email %></span>
 
 <%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Logout', sessions_path, method: :delete %>
+<%= link_to 'Register', new_kid_path %>
 
 </div>
 

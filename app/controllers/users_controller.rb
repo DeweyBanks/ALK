@@ -15,9 +15,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    # @user = User.find_by(name: user_params["name"])
-    # id = @user.id
-    # redirect_to "/users/#{id}"
+
   end
 
   # GET /users/new

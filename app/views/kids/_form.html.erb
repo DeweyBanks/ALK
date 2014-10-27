@@ -1,5 +1,10 @@
 <div>
-<%= form_for(@kid) do |f| %>
+  <% if params[:user_id]%>
+  <% form_info = [@user, @kid] %>
+  <% else %>
+  <% form_info = (@kid) %>
+  <% end %>
+  <%= form_for(@kid) do |f| %>
   <% if @kid.errors.any? %>
     <div id="error_explanation">
       <p><%= pluralize(@kid.errors.count, "error") %> prohibited this child from being saved:</p>
@@ -101,8 +106,9 @@
     </p>
   </div>
 </br>
-    <div>
+  <div>
     <p><%= f.submit %></p>
-  </div>
+  </div><br>
+  <%= link_to 'back', user_path(id: @user.id) %>
 <% end %>
 </div>
