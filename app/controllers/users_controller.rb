@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :authorize_admin_only,    only:   :index
   before_action :authorize_user_only,     only:   :show
   before_action :authorize_user_or_admin, except: [:index, :show, :new, :create]
+  before_action :load_kid
 
 
 
@@ -113,6 +114,12 @@ class UsersController < ApplicationController
   def load_user
     @user = User.find_by(id: params[:id])
     redirect_to root_path if !@user
+  end
+
+  def load_kid
+    @kids = @user.kids
+    # @kid = Kid.where("user_id: load_user.id")
+    # @kid = Kid.find_by user_id: params[:user_id]
   end
 
   def authorize_admin_only

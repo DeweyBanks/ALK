@@ -4,15 +4,20 @@
 
 <div>
 
-  <p> <span><%= @user.name %> </span> </p>
-  <hr style="color:#efefef">
+  <span><%= @user.name %> </span><br>
+  <span> <%= @user.email %></span><br><br>
 
-  <span> <%= @user.email %></span>
-
-<%= link_to 'Edit', edit_user_path(@user) %>
-<%= link_to 'Logout', sessions_path, method: :delete %>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Logout', sessions_path, method: :delete %> |
 <%= link_to 'Register', new_kid_path %>
 
 </div>
+<hr style="color:#efefef">
+
+
+ <% @kids.each do |k| %>
+ <p><%= link_to k.name, kid_path(k) %></p>
+ <% end %>
+
 
 </section>

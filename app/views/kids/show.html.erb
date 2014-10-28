@@ -1,9 +1,8 @@
-<%= render 'layouts/header' %>
+
 
 <section>
 
 <div>
-
   <p> Name: <%= @kid.name %>  </p>
   <hr style="color:#efefef">
 
@@ -22,10 +21,12 @@
   <p> Parent: <%= @kid.parent %></p>
   <p> Allowed to Pickup: <%= @kid.pickup %></p>
   <p> Allergies: <%= @kid.allergies %></p>
+</div>
 
 
 <%= link_to 'Edit', edit_kid_path(@kid) %>
-</div>
+<%= link_to 'Back', user_path(@user) %>
+<%= link_to 'Remove', @kid, method: :delete, data: { confirm: 'Are you sure?' } %>
 
 </section>
 

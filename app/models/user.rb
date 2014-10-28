@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :kids
+  has_many :kids,  dependent: :destroy
   has_secure_password
   validates :password, presence: true
   validates :email, presence: true, uniqueness: true

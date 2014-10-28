@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   resources :users
   resources :kids
+  resources :home, only: [:index]
+  resources :about, only: [:index]
+  resources :contact, only: [:index]
+  resources :photos, only: [:index]
 
 
 end
