@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :authorize_admin_only,    only:   :index
   before_action :authorize_user_only,     only:   :show
   before_action :authorize_user_or_admin, except: [:index, :show, :new, :create]
-  before_action :load_kid
+  before_action :load_kid,                except: [:index, :new, :create]
 
 
 
@@ -117,9 +117,7 @@ class UsersController < ApplicationController
   end
 
   def load_kid
-    @kids = @user.kids
-    # @kid = Kid.where("user_id: load_user.id")
-    # @kid = Kid.find_by user_id: params[:user_id]
+      @kids = @user.kids
   end
 
   def authorize_admin_only

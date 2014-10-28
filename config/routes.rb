@@ -7,9 +7,10 @@ Rails.application.routes.draw do
   resources :users
   resources :kids
   resources :home, only: [:index]
-  resources :about, only: [:index]
-  resources :contact, only: [:index]
-  resources :photos, only: [:index]
+  get "/about" => "home#about"
+  get "/contact" => "home#contact"
+  get "/photos" => "home#photos"
+
 
 
 end

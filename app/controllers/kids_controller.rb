@@ -81,6 +81,9 @@ class KidsController < ApplicationController
     )
   end
 
+    def current_kid
+    end
+
     def load_kid
       @kid = Kid.find_by(id: params[:id])
     end
