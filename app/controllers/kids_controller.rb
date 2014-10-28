@@ -1,9 +1,15 @@
 class KidsController < ApplicationController
+  before_action :load_user
+  before_action :set_user
+  before_action :authorize_admin_only,    only:   :index
+
 
   def index
+    @kids = Kid.all
   end
 
   def new
+    @user = User.find_by(id: current_user)
     @kid = Kid.new
   end
 
@@ -11,8 +17,16 @@ class KidsController < ApplicationController
   # POST /kids.json
   def create
     @kid = Kid.new(kid_params)
-    @kid.save
-    render :show
+    @kid.user_id = current_user.id
+    respond_to do |format|
+      if @kid.save
+        format.html { render :show }
+        format.json { render :show }
+      else
+        format.html { render :new }
+        format.json { render :new }
+      end
+    end
   end
 
   def show
@@ -45,5 +59,14 @@ class KidsController < ApplicationController
       :user_id
     )
   end
+
+    def load_user
+      @user = User.find_by(id: params[:id])
+      # redirect_to root_path if !@user
+    end
+
+    def set_user
+      @user = User.find(session[:user_id])
+    end
 
 end
