@@ -1,2 +1,4 @@
-<h1>Kids</h1>
-@kids
+<%= render ('layouts/header') %>
+ <% @kids.each do |k| %>
+ <p><%= link_to k.name, kid_path(k) %></p>
+ <% end %>

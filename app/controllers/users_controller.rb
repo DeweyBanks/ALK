@@ -2,8 +2,8 @@ class UsersController < ApplicationController
   before_action :authenticate,            except: [:new, :create]
   before_action :load_user,               except: [:index, :new, :create]
   before_action :authorize_admin_only,    only:   :index
-  before_action :authorize_user_only,     only:   :show
-  before_action :authorize_user_or_admin, except: [:index, :show, :new, :create]
+  before_action :authorize_user_or_admin, except: [:index, :new, :create]
+  # might be better to just do @user.kids
   before_action :load_kid,                except: [:index, :new, :create]
 
 
@@ -11,12 +11,12 @@ class UsersController < ApplicationController
   def index
     authorize_admin_only
     @users = User.all
+    @kids = Kid.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-
   end
 
   # GET /users/new
@@ -30,7 +30,6 @@ class UsersController < ApplicationController
   end
 
   def update
-
     if @user.update(user_params)
       redirect_to user_path(@user)
     else
@@ -47,7 +46,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save
-    render :new
+    session[:user_id] = @user.ids
+    redirect_to(@user)
   end
 
   # PATCH/PUT /users/1

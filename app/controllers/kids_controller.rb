@@ -20,7 +20,6 @@ class KidsController < ApplicationController
   # POST /kids
   # POST /kids.json
   def create
-    binding.pry
     @kid = Kid.new(kid_params)
     @kid.user_id = current_user.id
     respond_to do |format|
@@ -33,6 +32,15 @@ class KidsController < ApplicationController
       end
     end
   end
+
+  def update
+    if @kid.update(kid_params)
+      redirect_to kid_path(@kid)
+    else
+      render(:edit)
+    end
+  end
+
 
   def show
     @kid = Kid.find(params[:id])
@@ -63,6 +71,7 @@ class KidsController < ApplicationController
 
   def kid_params
     params.require(:kid).permit(
+      :user_id,
       :avatar,
       :name,
       :email,
@@ -79,7 +88,10 @@ class KidsController < ApplicationController
       :parent,
       :pickup,
       :allergies,
-      :user_id
+      :behavior_consent,
+      :image_consent,
+      :late_consent,
+
     )
   end
 

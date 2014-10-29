@@ -105,9 +105,79 @@
       <%= f.label :allergies  %>:
       <%= f.text_field :allergies, placeholder: 'Any Allergies?' %><br>
     </p>
+  </div><br>
+
+  <div>
+    <textarea class="terms" readonly="readonly">Acting Like A Kid Policies
+      Behavior Policy
+      We do not expect students to be perfect, remember every single line, or be Brad Pitt or Idina Menzel.  We do, however, have FIVE simple rules that must be followed in our class and we expect every student to know these rules and abide by them.
+      Be respectful.  Students must treat others the way they want to be treated.  In this class, students will be singing, acting, and dancing. Performing requires vulnerability and we want to create a comfortable and encouraging environment.
+      Keep hands, feet, and other objects to yourself unless otherwise directed. We want to create a safe environment.  There will be a lot of movement and dancing in this class and we will be teaching choreography and stage direction with props.  Students are not allowed to grab objects, touch each other, jump, or run in the room, unless we have given specific instructions to do so.
+      Follow the direction the FIRST time asked.  It goes without saying that if this rule is followed, there will be more time to have fun and less time giving directions.
+      Raise your hand and WAIT for permission to speak.  Every idea and question is important in our class.  If students are calling out and not waiting their turn, then ideas and questions will be missed.
+      Do your best!  We understand that we may ask some strange requests and that everyone has their own personal “best.”  “I don’t want to” is NOT an option in this class unless an acceptable reason is given.
+      REWARDS!
+      We will give out stickers and rewards for good behavior.   Students will receive a sticker for remembering to bring back their script every week, throughout the class when rules are being followed, and for any stand out behavior that goes above and beyond what is required.  After 10 stickers, students will be able to receive a PRIZE!
+
+      CONSEQUENCES
+      Students will receive warnings if rules are not being followed.  After THREE warnings there will be consequences.  After a third warning, students will be required to write a reflection about their behavior.  This reflection will be sent home for parents to sign and bring back to class.  If a behavior is still an issue after a student has filled out THREE reflections, the student may be asked to leave class and not return.
+    </textarea>
+     <p>
+      <%= f.label :behavior_policy  %>:
+      <%= radio_button_tag(:behavior_consent, "I Agree") %>
+      <%= label_tag(:behavior_consent, "I Agree") %>
+      <%= radio_button_tag(:behavior_consent, "I Disagree") %>
+      <%= label_tag(:behavior_consent, "I Disagree") %>
+    </p>
+  </div><br>
+
+  <div id="field">
+    <textarea class="terms" readonly="readonly">Parent/Guardian Consent Form
+
+      We are sending you this parental consent form to both inform you and to request permission for your child’s photo/image to potentially be posted on our website, as well as the company’s Facebook page and Instagram Account.
+
+      As you are aware, there are potential dangers associated with the posting of personally identifiable information on a web site since global access to the Internet does not allow us to control who may access such information. These dangers have always existed; however, we as a Theater Company want to celebrate your child and his/her work. The law requires that we ask for your permission to use your child’s photo for public display.
+
+      Pursuant to law, we will never release any personally identifiable information without prior written consent from you as parent or guardian. Personally identifiable information will only include student photo or video of performances.
+
+      If you, as the parent or guardian, wish to rescind this agreement, you may do so at any time in writing by sending an email to actinglikeakidco@gmail.com
+
+
+      I/We GRANT permission for this student’s photo/image without any other personal identifiers to be published on Acting Like a Kid’s website, Facebook page, and Instagram.
+      www.ActingLikeAKidNYC.com
+      www.facebook.com/ActingLikeAKidCo
+      www.instagram.com/ActingLikeAKidCo
+    </textarea>
+     <p>
+      <%= f.label :image_consent  %>:
+      <%= radio_button_tag(:image_consent, "I Agree") %>
+      <%= label_tag(:image_consent, "I Agree") %>
+      <%= radio_button_tag(:image_consent, "I Disagree") %>
+      <%= label_tag(:image_consent, "I Disagree") %>
+    </p>
+  </div><br>
+
+  <div id="field">
+    <textarea class="terms" readonly="readonly">Acting Like A Kid
+      Late Fee
+      Dismissal is at 5:15.  We require students to be picked up on time.  If students are picked up after 5:30 there will be a late fee of $20 per fifteen minutes per child.  The fine is charged regardless of reason for lateness or prior notification from the parent that they will be delayed.
+    </textarea>
+      <p>
+      <%= f.label :late_consent  %>:
+      <%= radio_button_tag(:late_consent, "I Agree") %>
+      <%= label_tag(:late_consent, "I Agree") %>
+      <%= radio_button_tag(:late_consent, "I Disagree") %>
+      <%= label_tag(:late_consent, "I Disagree") %>
+    </p>
+  </div><br>
+
+  <div>
   <%= f.label :profile_picture %>
   <%= f.file_field :avatar %>
-  <%= f.submit %>
+  </div>
+
+
+  <button><%= f.submit %></button>
 
   </div>
 
