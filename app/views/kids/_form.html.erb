@@ -5,7 +5,7 @@
   <% else %>
   <% form_info = (@kid) %>
   <% end %>
-  <%= form_for(@kid) do |f| %>
+  <%= form_for(@kid, :html => { :multipart => true }) do |f| %>
   <% if @kid.errors.any? %>
     <div id="error_explanation">
       <p><%= pluralize(@kid.errors.count, "error") %> prohibited this child from being saved:</p>
@@ -19,97 +19,100 @@
   <div>
     <p>
       <%= f.label :name  %>:
-      <%= f.text_field :name, placeholder: 'Name (required)' %><br/>
+      <%= f.text_field :name, placeholder: 'Name (required)' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :email  %>:
-      <%= f.text_field :email, placeholder: 'Email (required)' %><br/>
+      <%= f.text_field :email, placeholder: 'Email (required)' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :grade  %>:
-      <%= f.text_field :grade, placeholder: 'Grade' %><br/>
+      <%= f.text_field :grade, placeholder: 'Grade' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :classroom  %>:
-      <%= f.text_field :classroom, placeholder: 'Classroom' %><br/>
+      <%= f.text_field :classroom, placeholder: 'Classroom' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :dob  %>:
-      <%= f.date_field :dob, placeholder: 'Date of Birth' %><br/>
+      <%= f.date_field :dob, placeholder: 'Date of Birth' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :address  %>:
-      <%= f.text_field :address, placeholder: 'Address' %><br/>
+      <%= f.text_field :address, placeholder: 'Address' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :apt  %>:
-      <%= f.text_field :apt, placeholder: 'Apt' %><br/>
+      <%= f.text_field :apt, placeholder: 'Apt' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :city  %>:
-      <%= f.text_field :city, placeholder: 'City' %><br/>
+      <%= f.text_field :city, placeholder: 'City' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :state  %>:
-      <%= f.text_field :state, placeholder: 'State' %><br/>
+      <%= f.text_field :state, placeholder: 'State' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :zip  %>:
-      <%= f.text_field :zip, placeholder: 'Zip Code' %><br/>
+      <%= f.text_field :zip, placeholder: 'Zip Code' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :home_phone  %>:
-      <%= f.text_field :home_phone, placeholder: 'Home Phone' %><br/>
+      <%= f.text_field :home_phone, placeholder: 'Home Phone' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :work_phone  %>:
-      <%= f.text_field :work_phone, placeholder: 'Work Phone (incl ext)' %><br/>
+      <%= f.text_field :work_phone, placeholder: 'Work Phone (incl ext)' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :parent  %>:
-      <%= f.text_field :parent, placeholder: 'Parent' %><br/>
+      <%= f.text_field :parent, placeholder: 'Parent' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :pickup  %>:
-      <%= f.text_field :pickup, placeholder: 'Who is allowed to pickup your child?' %><br/>
+      <%= f.text_field :pickup, placeholder: 'Who is allowed to pickup your child?' %><br>
     </p>
   </div>
   <div>
     <p>
       <%= f.label :allergies  %>:
-      <%= f.text_field :allergies, placeholder: 'Any Allergies?' %><br/>
+      <%= f.text_field :allergies, placeholder: 'Any Allergies?' %><br>
     </p>
+  <%= f.label :profile_picture %>
+  <%= f.file_field :avatar %>
+  <%= f.submit %>
+
   </div>
-</br>
-  <div>
-    <p><%= f.submit %></p>
-  </div><br>
+
 
 <% end %>
+
+
 </div>

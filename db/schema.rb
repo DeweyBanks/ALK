@@ -11,35 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141027174925) do
+ActiveRecord::Schema.define(version: 20141029140117) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "kids", force: true do |t|
-    t.string  "name",                            null: false
-    t.string  "email",                           null: false
-    t.integer "grade"
-    t.string  "classroom"
-    t.date    "dob"
-    t.string  "address"
-    t.string  "apt"
-    t.string  "city"
-    t.string  "state",      default: "New York"
-    t.integer "zip"
-    t.string  "home_phone"
-    t.string  "work_phone"
-    t.string  "parent"
-    t.string  "pickup"
-    t.text    "allergies"
-    t.integer "user_id"
+    t.string   "name",                                     null: false
+    t.string   "email",                                    null: false
+    t.integer  "grade"
+    t.string   "classroom"
+    t.date     "dob"
+    t.string   "address"
+    t.string   "apt"
+    t.string   "city"
+    t.string   "state",               default: "New York"
+    t.integer  "zip"
+    t.string   "home_phone"
+    t.string   "work_phone"
+    t.string   "parent"
+    t.string   "pickup"
+    t.text     "allergies"
+    t.integer  "user_id"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "users", force: true do |t|
-    t.string  "name",                            null: false
-    t.string  "email",                           null: false
-    t.string  "password_digest",                 null: false
-    t.boolean "admin",           default: false
+    t.string   "name",                                null: false
+    t.string   "email",                               null: false
+    t.string   "password_digest",                     null: false
+    t.boolean  "admin",               default: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
 end
