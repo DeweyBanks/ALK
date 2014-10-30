@@ -3,42 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-  background-color: #6C8CD5;
-  color: white;
-}
-
-a {
-  text-decoration: none;
-  color: ;
-}
-
-#wrapper {
-  margin: auto;
-  position: absolute;
-  top: 200px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 545px;
-  height: 545px;
-
-}
-
-#wrapper > img {
-  width: 100%;
-  position: relative;
-}
-
-textarea.terms {
-  width: 600px;
-  height: 200px;
-  border: 1px solid #ccc;
-  background: #f2f2f2;
-  font: normal 11px/15px arial;
-  padding: 6px;
-  color: #333;
-}
 
 
 
