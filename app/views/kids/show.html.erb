@@ -27,9 +27,6 @@
   <p> Parent: <%= @kid.parent %></p>
   <p> Allowed to Pickup: <%= @kid.pickup %></p>
   <p> Allergies: <%= @kid.allergies %></p>
-  <p> Behavior Policies: <%= @kid.behavior_consent %></p>
-  <p> Image Consent: <%= @kid.image_consent %></p>
-  <p> Late Fee Policy: <%= @kid.late_consent %></p>
 </div>
 
 
@@ -37,6 +34,7 @@
 <%= link_to 'Back', user_path(@user) %>
 <%= link_to 'Remove', @kid, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs'%>
 
-</section>
+</section><br><br>
 
 
+<%= render ('layouts/footer') %>
