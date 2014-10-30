@@ -1,28 +1,14 @@
-== README
+<h1>Acting Like A Kid!</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p>ALK is a website for actinglikeakidco, a non-profit theatre for kids. ALK is run by Sam McGuinness and Amy Hall. The purpose of this app is to allow parents to create profiles for their kids and then use those profiles to sign up for classes. </p>
 
-Things you may want to cover:
+<%= image_tag('aklhdh.png') %>
+<h2>Built with Ruby on Rails</h2>
+<h3>DataBase by, postgresql</h3>
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<h2>Gems Used:</h2>
+<ul>
+<li>Rails '4.1.6'</li>
+<li>PG</li>
+<li>Paperclip</li>
+</ul>
