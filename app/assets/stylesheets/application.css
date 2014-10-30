@@ -60,3 +60,15 @@ textarea.terms {
   color: #333;
 }
 
+.profile-photo {
+    float: right;
+    margin-left: 10px;
+    max-width: 25%;
+    border-radius: 5%;
+
+}
+
+.info {
+   margin: 0 5% 10% 5%;
+   font-size: 1.5em;
+}
