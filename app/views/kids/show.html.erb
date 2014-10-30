@@ -3,13 +3,13 @@
 <section>
 
 <div id="wrapper">
-  <ul>
 
-    <li><%= image_tag @kid.avatar.url(:medium) %></li>
 
-  </ul>
+    <%= image_tag @kid.avatar.url(:medium) %>
+
+
 </div>
-  <p> Name: <%= @kid.name %>  </p>
+  <h1> <%= @kid.name %>  </h2>
   <hr style="color:#efefef">
 
   <p> Email: <%= @kid.email %></p>
@@ -30,9 +30,9 @@
 </div>
 
 
-<%= link_to 'Edit', edit_kid_path(@kid) %>
-<%= link_to 'Back', user_path(@user) %>
-<%= link_to 'Remove', @kid, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs'%>
+<button><%= link_to 'Edit', edit_kid_path(@kid) %></button>
+<button><%= link_to 'Back', user_path(@user) %></button>
+<button><%= link_to 'Remove', @kid, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-danger'%></button>
 
 </section><br><br>
 

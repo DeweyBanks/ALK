@@ -2,22 +2,23 @@
 
 <section>
 
-<div>
-
-  <span><%= @user.name %> </span><br>
+<div class="user">
+  <h1><%= @user.name %> </h1>
   <span> <%= @user.email %></span><br><br>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Logout', sessions_path, method: :delete %> |
-<%= link_to 'Register Your Child', new_kid_path %>
-
 </div>
+
+<button><%= link_to 'Edit', edit_user_path(@user) %></button>
+<button><%= link_to 'Logout', sessions_path, method: :delete %></button>
+<button><%= link_to 'Register Your Child', new_kid_path %></button>
+
 <hr style="color:#efefef">
 
-
+<div class="kids">
+  <h5>Children:</h5>
  <% @kids.each do |k| %>
  <p><%= link_to k.name, kid_path(k) %></p>
  <% end %>
+</div>
 
 
 </section>

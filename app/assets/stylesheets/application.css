@@ -15,12 +15,12 @@
  */
 body {
   background-color: #13213D;
-  color: white;
+  color: #FDFCDC;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color:  #FDFCDC;
 }
 
 footer {
@@ -36,7 +36,7 @@ footer {
 #wrapper {
   margin: auto;
   position: absolute;
-  top: 200px;
+  top: 400px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -71,4 +71,35 @@ textarea.terms {
 .info {
    margin: 0 5% 10% 5%;
    font-size: 1.5em;
+}
+
+.nav > a {
+  font-size: 1.5em;
+}
+
+button {
+  background-color: olive;
+  font-size: 1.1em;
+}
+
+input[type="submit"] {
+  background-color: olive;
+  color:  #FDFCDC;
+  font-size: 1.1em;
+}
+
+header {
+  text-align: center;
+}
+
+#logo > a {
+  font-size: 2em;
+}
+
+body > section > div.user {
+  font-size: 1.5em;
+}
+
+.kids {
+  font-size: 1.9em;
 }
