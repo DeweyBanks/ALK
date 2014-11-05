@@ -8,5 +8,5 @@
 
 
 u1 = User.create(name: "Dewey", email: "deweybanks@gmail.com", password: "4384ForestHills", password_confirmation: "4384ForestHills", admin: true)
-
+u2 = User.create(name: "Amy", email: "actinglikeakidco@gmail.com", password: "10students", password_confirmation: "10students", admin: true)
 k1 = Kid.create(name: "Billy Madison", email: 'billay@gmail.com' )
