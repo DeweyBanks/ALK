@@ -16,14 +16,15 @@
   <p> Grade: <%= @kid.grade %></p>
   <p> Classroom: <%= @kid.classroom %></p>
   <p> DOB: <%= @kid.dob %></p>
-  <p> Address:<br>
-      <%= @kid.address %><br>
-      <%= @kid.apt %><br>
-      <%= @kid.city %><br>
-      <%= @kid.state %><br>
-      <%= @kid.zip %></p>
-  <p> Home Phone: <%= @kid.home_phone %></p>
-  <p> Work Phone: <%= @kid.work_phone %></p>
+  <address>
+    <strong>Address:</strong><br>
+    <%= @kid.address %><br>
+    <%= @kid.city %>,<%= @kid.state %><%= @kid.zip %><br>
+    <abbr title="Phone">P:</abbr> <%= @kid.home_phone %><br>
+    <abbr tite="Work">W:</abbr> <%= @kid.work_phone %>
+  </address>
+
+
   <p> Parent: <%= @kid.parent %></p>
   <p> Allowed to Pickup: <%= @kid.pickup %></p>
   <p> Allergies: <%= @kid.allergies %></p>

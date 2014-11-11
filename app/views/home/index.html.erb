@@ -1,8 +1,57 @@
-<%= render 'layouts/header' %>
+<style type="text/css">
 
-<div id="wrapper">
-  <section>
+body {
+  background: url("/assets/starskids.jpg");
+  background-size: 100% 100%;
+}
 
-  </section>
+.site-wrapper-inner {
+  background-color: #fff;
+  color: black;
+  opacity: .8;
+}
+
+body > div > div > div > div > div.mastfoot > div > p.test-muted {
+  font-style: bold;
+  color: black;
+}
+
+</style>
+
+
+<div class="container-fluid" style="padding-top:200px;">
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="inner cover">
+        <h1 class="cover-heading">Acting Like A Kid</h1>
+        <p class="lead">Welcome to Acting Like a Kid! We are a non-profit theatre company dedicated to educating children in the arts of theatre, dance, and music.</p>
+        <p class="lead">
+          <%= link_to('About', ('/about')) %>
+          <%= link_to('Photos', ('/photos')) %>
+          <%= link_to('Contact', ('/contact')) %>
+          <%= link_to('Sign up', new_user_path) %>
+          <%= link_to('Login', user_path(:id)) %>
+        </p>
+        </div>
+    <div class="mastfoot">
+    <div class="inner">
+      <p><a href="https://www.facebook.com/ActingLikeAKidCo"><%= image_tag('fb_icon.png', :size => "30x32") %></a>
+        <style>.ig-b- { display: inline-block; }
+        .ig-b- img { visibility: hidden; }
+        .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; }
+        .ig-b-32 { width: 32px; height: 32px; background: url(//badges.instagram.com/static/images/ig-badge-sprite-32.png) no-repeat 0 0; }
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        .ig-b-32 { background-image: url(//badges.instagram.com/static/images/ig-badge-sprite-32@2x.png); background-size: 60px 178px; } }
+        </style>
+        <a href="http://instagram.com/actinglikeakidco?ref=badge" class="ig-b- ig-b-32"><img src="//badges.instagram.com/static/images/ig-badge-32.png" alt="Instagram" /></a>
+      <p class="test-muted">&copy; 2014 Acting Like A Kid Co.</p>
+    </div>
+  </div>
+  </div>
+  </div>
 </div>
-<%= render 'layouts/footer' %>
+</div>
+
+
+

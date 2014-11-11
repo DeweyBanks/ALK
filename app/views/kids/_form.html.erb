@@ -1,14 +1,15 @@
 <%= render ('layouts/header') %>
 
-<div>
-  <p> <span><%= @user.name %> </span> </p>
-  <% if params[:user_id]%>
-  <% form_info = [@user, @kid] %>
-  <% else %>
-  <% form_info = (@kid) %>
-  <% end %>
-  <%= form_for(@kid, :html => { :multipart => true }) do |f| %>
-  <% if @kid.errors.any? %>
+<h1><%= @user.name %></h1>
+<form role="form">
+  <div class="form-group">
+    <% if params[:user_id]%>
+    <% form_info = [@user, @kid] %>
+    <% else %>
+    <% form_info = (@kid) %>
+    <% end %>
+    <%= form_for(@kid, :html => { :multipart => true }) do |f| %>
+    <% if @kid.errors.any? %>
     <div id="error_explanation">
       <p><%= pluralize(@kid.errors.count, "error") %> prohibited this child from being saved:</p>
       <ul>
@@ -16,101 +17,70 @@
         <li style="color: red"><%= message %></li>
       <% end %>
       </ul>
-    </div>
-  <% end %>
-  <div>
-    <p>
-      <%= f.label :name  %>:
-      <%= f.text_field :name, placeholder: 'Name (required)' %><br>
-    </p>
   </div>
-  <div>
-    <p>
-      <%= f.label :email  %>:
-      <%= f.text_field :email, placeholder: 'Email (required)' %><br>
-    </p>
+    <% end %>
+  <div class="form-group">
+    <%= f.label :name  %>:
+    <%= f.text_field :name, placeholder: 'Name (required)' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :grade  %>:
-      <%= f.text_field :grade, placeholder: 'Grade' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :email  %>:
+    <%= f.text_field :email, placeholder: 'Email (required)' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :classroom  %>:
-      <%= f.text_field :classroom, placeholder: 'Classroom' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :grade  %>:
+    <%= f.text_field :grade, placeholder: 'Grade' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :dob  %>:
-      <%= f.date_field :dob, placeholder: 'Date of Birth' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :classroom  %>:
+    <%= f.text_field :classroom, placeholder: 'Classroom' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :address  %>:
-      <%= f.text_field :address, placeholder: 'Address' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :dob  %>:
+    <%= f.date_field :dob, placeholder: 'Date of Birth' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :apt  %>:
-      <%= f.text_field :apt, placeholder: 'Apt' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :address  %>:
+    <%= f.text_field :address, placeholder: 'Address' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :city  %>:
-      <%= f.text_field :city, placeholder: 'City' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :apt  %>:
+    <%= f.text_field :apt, placeholder: 'Apt' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :state  %>:
-      <%= f.text_field :state, placeholder: 'State' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :city  %>:
+    <%= f.text_field :city, placeholder: 'City' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :zip  %>:
-      <%= f.text_field :zip, placeholder: 'Zip Code' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :state  %>:
+    <%= f.text_field :state, placeholder: 'State' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :home_phone  %>:
-      <%= f.text_field :home_phone, placeholder: 'Home Phone' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :zip  %>:
+    <%= f.text_field :zip, placeholder: 'Zip Code' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :work_phone  %>:
-      <%= f.text_field :work_phone, placeholder: 'Work Phone (incl ext)' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :home_phone  %>:
+    <%= f.text_field :home_phone, placeholder: 'Home Phone' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :parent  %>:
-      <%= f.text_field :parent, placeholder: 'Parent' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :work_phone  %>:
+    <%= f.text_field :work_phone, placeholder: 'Work Phone (incl ext)' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :pickup  %>:
-      <%= f.text_field :pickup, placeholder: 'Who is allowed to pickup your child?' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :parent  %>:
+    <%= f.text_field :parent, placeholder: 'Parent' %><br>
   </div>
-  <div>
-    <p>
-      <%= f.label :allergies  %>:
-      <%= f.text_field :allergies, placeholder: 'Any Allergies?' %><br>
-    </p>
+  <div class="form-group">
+    <%= f.label :pickup  %>:
+    <%= f.text_field :pickup, placeholder: 'Who is allowed to pickup your child?' %><br>
+  </div>
+  <div class="form-group">
+    <%= f.label :allergies  %>:
+    <%= f.text_field :allergies, placeholder: 'Any Allergies?' %><br>
   </div><br>
-
-  <div>
-    <textarea class="terms" readonly="readonly">Acting Like A Kid Policies
+  <div class="form-group">
+    <textarea class="form-control" id="form-one" rows="6" readonly="readonly">Acting Like A Kid Policies
       Behavior Policy
       We do not expect students to be perfect, remember every single line, or be Brad Pitt or Idina Menzel.  We do, however, have FIVE simple rules that must be followed in our class and we expect every student to know these rules and abide by them.
       Be respectful.  Students must treat others the way they want to be treated.  In this class, students will be singing, acting, and dancing. Performing requires vulnerability and we want to create a comfortable and encouraging environment.
@@ -133,8 +103,8 @@
     </p>
   </div><br>
 
-  <div id="field">
-    <textarea class="terms" readonly="readonly">Parent/Guardian Consent Form
+  <div class="form-group">
+    <textarea class="form-control" id="form-two" rows="6" readonly="readonly">Parent/Guardian Consent Form
 
       We are sending you this parental consent form to both inform you and to request permission for your child’s photo/image to potentially be posted on our website, as well as the company’s Facebook page and Instagram Account.
 
@@ -159,8 +129,8 @@
     </p>
   </div><br>
 
-  <div id="field">
-    <textarea class="terms" readonly="readonly">Acting Like A Kid
+  <div class="form-group">
+    <textarea class="form-control" id="form-three" rows="6" readonly="readonly">Acting Like A Kid
       Late Fee
       Dismissal is at 5:15.  We require students to be picked up on time.  If students are picked up after 5:30 there will be a late fee of $20 per fifteen minutes per child.  The fine is charged regardless of reason for lateness or prior notification from the parent that they will be delayed.
     </textarea>
@@ -172,21 +142,14 @@
       <%= label_tag(:late_consent, "I Disagree") %>
     </p>
   </div><br>
-
-  <div>
-  <%= f.label :profile_picture %>
-  <%= f.file_field :avatar %>
+  <div class="form-group">
+    <%= f.label :profile_picture %>
+    <%= f.file_field :avatar %>
+    <p class="help-block">Choose a picture for your child's profile.</p>
   </div><br><br>
-
-
- <%= f.submit "Register Child" %>
-
-  </div>
-
-
-<% end %>
-
-
-</div><br><br>
+  <%= f.submit "Register Child", class: "btn btn-default" %>
+  <% end %>
+  </div><br><br>
+</form>
 
 <%= render ('layouts/footer') %>

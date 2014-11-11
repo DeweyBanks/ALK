@@ -1,18 +1,17 @@
+<style type="text/css">
+body {
+  background-color: yellow;
+}
+</style>
+
 <%= render 'layouts/header' %>
-<div id="wrapper">
-  <section id="primary">
-    <h2 id="contact">Contact us!!</h2>
-    <p>If you have any questions or comments please email us!</p>
-  </section>
-  <section id="secondary">
 
-    <ul class="contact-info">
-      <li class="mail"><a href="mailto:actinglikeakidco@gmail.com">actinglikeakidco@gmail.com</a></li><br>
-    </ul>
-  </section>
-
-<div class = "image">
-  <%= image_tag('onthephone.jpg') %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Contact Us!</h1>
+    <p class="lead">If you have any questions or comments please email us!</p>
+    <p class="lead"><%= image_tag('onthephone.jpg', :class => 'contact-img img-responsive') %></p>
+    <p><a class="btn btn-lg btn-success" href="mailto:actinglikeakidco@gmail.com" role="button">email us!</a></p>
+  </div>
+  <%= render 'layouts/footer' %>
 </div>
-
-<%= render 'layouts/footer' %>
