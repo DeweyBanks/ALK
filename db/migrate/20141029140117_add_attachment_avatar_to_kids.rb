@@ -1,7 +1,7 @@
 class AddAttachmentAvatarToKids < ActiveRecord::Migration
   def self.up
     change_table :kids do |t|
-      t.attachment :avatar
+      t.attachment :kids, :avatar
     end
   end
 

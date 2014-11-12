@@ -1,3 +1,23 @@
+<style type="text/css">
+
+.form {
+  padding-top: 100px;
+}
+
+input {
+  vertical-align: justify;
+}
+
+#form-one, #form-two, #form-three {
+  width: 50%;
+  margin: auto;
+}
+
+#kid_avatar {
+  margin-left: 47%;
+}
+</style>
+
 <%= render ('layouts/header') %>
 
 <h1><%= @user.name %></h1>
@@ -143,11 +163,11 @@
     </p>
   </div><br>
   <div class="form-group">
-    <%= f.label :profile_picture %>
+    <%= f.label :avatar %>
     <%= f.file_field :avatar %>
     <p class="help-block">Choose a picture for your child's profile.</p>
   </div><br><br>
-  <%= f.submit "Register Child", class: "btn btn-default" %>
+  <%= f.submit "Register Child" %>
   <% end %>
   </div><br><br>
 </form>

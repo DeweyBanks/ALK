@@ -14,10 +14,6 @@
  *= require_self
  */
 
-body {
-  padding-top: 1px;
-
-}
 
 
 
@@ -59,14 +55,22 @@ div.col-md-5 > img {
   background-color: transparent;
 }
 
+body > div > form > div > p > label {
+  position: relative;
+  right: 25px;
+}
+
 #user_password {
   position: relative;
-  right: 10px;
+  right: 13px;
 }
 
 #user_password_confirmation {
   position: relative;
-  right: 20px;
+  right: 23px;
 }
 
 
+input {
+  color: black;
+}

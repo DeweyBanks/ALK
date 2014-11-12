@@ -33,13 +33,17 @@ ActiveRecord::Schema.define(version: 20141029184712) do
     t.string   "pickup"
     t.text     "allergies"
     t.integer  "user_id"
+    t.string   "kids_file_name"
+    t.string   "kids_content_type"
+    t.integer  "kids_file_size"
+    t.datetime "kids_updated_at"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.boolean  "behavior_consent"
-    t.boolean  "image_consent"
-    t.boolean  "late_consent"
+    t.string   "behavior_consent"
+    t.string   "image_consent"
+    t.string   "late_consent"
   end
 
   create_table "users", force: true do |t|
