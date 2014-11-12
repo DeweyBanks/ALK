@@ -45,8 +45,8 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    @user.save
     session[:user_id] = @user.id
+    @user.save
     redirect_to user_path(@user)
   end
 

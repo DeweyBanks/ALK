@@ -21,7 +21,7 @@ input {
 <%= render ('layouts/header') %>
 
 <h1><%= @user.name %></h1>
-<form role="form">
+<div class="form">
   <div class="form-group">
     <% if params[:user_id]%>
     <% form_info = [@user, @kid] %>
@@ -170,6 +170,6 @@ input {
   <%= f.submit "Register Child" %>
   <% end %>
   </div><br><br>
-</form>
+</div>
 
 <%= render ('layouts/footer') %>
