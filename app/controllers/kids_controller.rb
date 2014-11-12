@@ -20,7 +20,6 @@ class KidsController < ApplicationController
   # POST /kids
   # POST /kids.json
   def create
-    binding.pry
     @kid = Kid.new(kid_params)
     @kid.user_id = current_user.id
     respond_to do |format|
