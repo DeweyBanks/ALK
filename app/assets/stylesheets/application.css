@@ -55,22 +55,10 @@ div.col-md-5 > img {
   background-color: transparent;
 }
 
-body > div > form > div > p > label {
-  position: relative;
-  right: 25px;
-}
-
-#user_password {
-  position: relative;
-  right: 13px;
-}
-
-#user_password_confirmation {
-  position: relative;
-  right: 23px;
-}
-
 
 input {
   color: black;
 }
+
+
+.

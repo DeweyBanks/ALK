@@ -17,34 +17,30 @@
 
     <div class="form-field">
       <p>
-        <%= f.label :email %>
         <%= f.text_field :email, placeholder: 'Email (required)' %>
       </p>
     </div>
 
     <div class="form-field">
       <p>
-        <%= f.label :name  %>
         <%= f.text_field :name, placeholder: 'Name (required)' %>
       </p>
     </div>
 
     <div class="form-field">
       <p>
-        <%= f.label :password %>
         <%= f.password_field :password, placeholder: 'Password (required)' %>
       </p>
     </div>
 
     <div class="form-field">
       <p>
-        <%= f.label :password_confirmation, 'Confirmation' %>
         <%= f.password_field :password_confirmation, placeholder: 'Confirmation (required)' %>
       </p>
     </div>
 
     <div class="form-field">
-      <%= f.submit "Submit" %>
+      <%= f.submit "Submit", :class => "btn btn-primary" %>
     </div>
 
   <% end %>
