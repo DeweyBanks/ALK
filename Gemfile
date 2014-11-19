@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
-ruby '2.1.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -42,5 +42,7 @@ gem 'pry',           group: :development
 
 # the most up to date paperclip
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "simple_calendar", "~> 1.1.0"
+gem 'pony', '~> 1.11'
 gem 'rails_12factor', group: :production
 

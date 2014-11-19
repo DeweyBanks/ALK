@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :courses
+
   root "welcome#index"
   get "/login" => "sessions#new"
   resource  :sessions, only: [:create, :destroy]
