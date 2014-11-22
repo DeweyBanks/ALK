@@ -44,5 +44,6 @@ gem 'pry',           group: :development
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem "simple_calendar", "~> 1.1.0"
 gem 'pony', '~> 1.11'
+gem 'simple_form'
 gem 'rails_12factor', group: :production
 

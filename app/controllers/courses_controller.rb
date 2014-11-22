@@ -14,7 +14,9 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
+    @kid = Kid.find_by(params[:id])
     @course = Course.new
+    binding.pry
   end
 
   # GET /courses/1/edit

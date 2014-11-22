@@ -50,15 +50,6 @@ class UsersController < ApplicationController
     redirect_to user_path(@user)
   end
 
-  # PATCH/PUT /users/1
-  def update
-    if @user.update(user_params)
-        redirect_to user_path(@user)
-    else
-        render(:edit)
-    end
-  end
-
     # PATCH/PUT /users/1/password
   def update_password
     if !@user.authenticate(user_password_params[:old_password])
