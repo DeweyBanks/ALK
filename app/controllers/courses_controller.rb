@@ -14,9 +14,8 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-    @kid = Kid.find_by(params[:id])
     @course = Course.new
-    binding.pry
+
   end
 
   # GET /courses/1/edit
@@ -42,6 +41,7 @@ class CoursesController < ApplicationController
   # PATCH/PUT /courses/1
   # PATCH/PUT /courses/1.json
   def update
+    @kid = Kid.find_by(params[:id])
     respond_to do |format|
       if @course.update(course_params)
         format.html { redirect_to @course, notice: 'Course was successfully updated.' }

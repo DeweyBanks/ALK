@@ -1,7 +1,7 @@
 <div class="container user-form">
   <h2 class="form-signin-heading">Create a New Account</h2>
   <div class="form-signin" role="form">
-    <%= form_for(@user) do |f| %>
+    <%= simple_form_for(@user, html: {class: "form-horizontal"}) do |f| %>
     <% if @user.errors.any? %>
     <div id="error_explanation">
 
@@ -15,32 +15,15 @@
     </div>
     <% end %>
 
-    <div class="form-field">
-      <p>
-        <%= f.text_field :email, placeholder: 'Email (required)' %>
-      </p>
-    </div>
 
-    <div class="form-field">
-      <p>
-        <%= f.text_field :name, placeholder: 'Name (required)' %>
-      </p>
-    </div>
+    <%= f.input :email %>
+    <%= f.input :name %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
+    <br>
 
-    <div class="form-field">
-      <p>
-        <%= f.password_field :password, placeholder: 'Password (required)' %>
-      </p>
-    </div>
-
-    <div class="form-field">
-      <p>
-        <%= f.password_field :password_confirmation, placeholder: 'Confirmation (required)' %>
-      </p>
-    </div>
-
-    <div class="form-field">
-      <%= f.submit "Submit", :class => "btn btn-primary" %>
+    <div class="form-actions">
+      <%= f.button :submit, :Submit %>
     </div>
 
   <% end %>

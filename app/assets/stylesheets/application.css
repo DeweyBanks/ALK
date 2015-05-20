@@ -61,4 +61,17 @@ input {
 }
 
 
-.
+.control-group {
+  position: relative;
+  margin: 0 auto;
+  width: 200px;
+}
+
+
+
+@media (max-width: 600px) {
+  #kid_avatar {
+  position: relative;
+  right: 20px;
+}
+}

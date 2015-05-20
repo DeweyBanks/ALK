@@ -28,7 +28,7 @@ input {
     <% else %>
     <% form_info = (@kid) %>
     <% end %>
-    <%= form_for(@kid, :html => { :multipart => true }) do |f| %>
+    <%= simple_form_for(@kid, :html => { class: "form-horizontal", :multipart => true }) do |f| %>
     <% if @kid.errors.any? %>
     <div id="error_explanation">
       <p><%= pluralize(@kid.errors.count, "error") %> prohibited this child from being saved:</p>
@@ -39,66 +39,29 @@ input {
       </ul>
   </div>
     <% end %>
+  <%= f.input :name %>
+  <%= f.input :email %>
+  <%= f.input :grade %>
+  <%= f.input :classroom %>
+  <%= f.input :grade %>
+  <%= f.input :dob %>
+  <%= f.input :address %>
+  <%= f.input :apt %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <%= f.input :home_phone %>
+  <%= f.input :work_phone %>
+  <%= f.input :parent %>
   <div class="form-group">
-    <%= f.label :name  %>:
-    <%= f.text_field :name, placeholder: 'Name (required)' %><br>
+    <%= f.label :pickup  %><br>
+    <%= f.text_field :pickup, placeholder: 'Who is allowed to pickup your child?' %>
   </div>
   <div class="form-group">
-    <%= f.label :email  %>:
-    <%= f.text_field :email, placeholder: 'Email (required)' %><br>
+    <%= f.label :allergies  %><br>
+    <%= f.text_field :allergies, placeholder: 'Does your child have any allergies?' %>
   </div>
-  <div class="form-group">
-    <%= f.label :grade  %>:
-    <%= f.text_field :grade, placeholder: 'Grade' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :classroom  %>:
-    <%= f.text_field :classroom, placeholder: 'Classroom' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :dob  %>:
-    <%= f.date_field :dob, placeholder: 'Date of Birth' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :address  %>:
-    <%= f.text_field :address, placeholder: 'Address' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :apt  %>:
-    <%= f.text_field :apt, placeholder: 'Apt' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :city  %>:
-    <%= f.text_field :city, placeholder: 'City' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :state  %>:
-    <%= f.text_field :state, placeholder: 'State' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :zip  %>:
-    <%= f.text_field :zip, placeholder: 'Zip Code' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :home_phone  %>:
-    <%= f.text_field :home_phone, placeholder: 'Home Phone' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :work_phone  %>:
-    <%= f.text_field :work_phone, placeholder: 'Work Phone (incl ext)' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :parent  %>:
-    <%= f.text_field :parent, placeholder: 'Parent' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :pickup  %>:
-    <%= f.text_field :pickup, placeholder: 'Who is allowed to pickup your child?' %><br>
-  </div>
-  <div class="form-group">
-    <%= f.label :allergies  %>:
-    <%= f.text_field :allergies, placeholder: 'Any Allergies?' %><br>
-  </div><br>
+  <br>
   <div class="form-group">
     <textarea class="form-control" id="form-one" rows="6" readonly="readonly">Acting Like A Kid Policies
       Behavior Policy
@@ -161,13 +124,15 @@ input {
       <%= radio_button_tag(:late_consent, "I Disagree") %>
       <%= label_tag(:late_consent, "I Disagree") %>
     </p>
-  </div><br>
+  </div>
   <div class="form-group">
-    <%= f.label :avatar %>
+    <%= f.label :Profile_Picture %>
     <%= f.file_field :avatar %>
     <p class="help-block">Choose a picture for your child's profile.</p>
-  </div><br><br>
-  <%= f.submit "Register Child" %>
+  </div><br>
+  <div class="form-action">
+  <%= f.button :submit, 'Register Child' %>
+  </div>
   <% end %>
   </div><br><br>
 </div>
