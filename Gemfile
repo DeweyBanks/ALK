@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+
 gem 'pry',           group: :development
 
 # Use ActiveModel has_secure_password
@@ -41,7 +41,7 @@ gem 'pry',           group: :development
 # gem 'debugger', group: [:development, :test]
 
 # the most up to date paperclip
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip'
 gem "simple_calendar", "~> 1.1.0"
 gem 'pony', '~> 1.11'
 gem 'simple_form'
